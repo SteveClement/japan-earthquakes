@@ -1,17 +1,31 @@
 <!DOCTYPE html>
 <html>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<style>
+
+.center {
+  font-family: 'Roboto', sans-serif;
+  margin: auto;
+  width: 60%;
+}
+
+</style>
+
 <body>
   <div id='viz'></div>
-  #### Time lapse visualization of all earthquakes of magnitude > 5 in Japan in 2011.
 
-  Each circle represents a single earthquake of magnitude 5 or more: the larger the radius, the larger the magnitude.
+  <div id='text' class='center'>
+    Time lapse visualization of all earthquakes of magnitude > 5 in Japan in 2011.
+    
+    Each circle represents a single earthquake of magnitude 5 or more: the larger the radius, the larger the magnitude.
 
-  Note the Tohoku earthquake (the largest recorded earthquake in Japan's history) on March 11 2011. As can be seen on the map, the aftershakes from this quake continue for months afterwards.
+    Note the Tohoku earthquake (the largest recorded earthquake in Japan's history) on March 11 2011. As can be seen on the map, the aftershakes from this quake continue for months afterwards.
 
-  Japan Earthquake Data: [USGS](http://earthquake.usgs.gov/earthquakes/search/)
+    Japan Earthquake Data: [USGS](http://earthquake.usgs.gov/earthquakes/search/)
 
-  Japan Map Topojson Data: [Data of Japan](https://github.com/dataofjapan/land)
-
+    Japan Map Topojson Data: [Data of Japan](https://github.com/dataofjapan/land)
+  </div>
   <script src="//d3js.org/d3.v3.min.js"></script>
   <script src="https://d3js.org/topojson.v0.min.js"></script>
   <script>
