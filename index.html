@@ -2,6 +2,7 @@
 <html>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="import" href="/_includes/google_analytics.html">
 
 <style>
 .vizd3 {
@@ -18,9 +19,7 @@
 </style>
 
 <body>
-  {% include google_analytics.html %}
-
-  <div id='viz'></div>
+  <div id='viz' class='vizd3'></div>
 
   <div class='text'>
     <h1>Time lapse visualization of Japan earthquakes in 2011</h1>
@@ -41,7 +40,7 @@
     </p>
   </div>
 
-  {% include disqus_comments.html %}
+  <link rel="import" href="/_includes/disqus_comments.html">
 </body>
 
 
