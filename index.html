@@ -40,7 +40,19 @@
     </p>
   </div>
 
-  <link rel="import" href="/_includes/disqus_comments.html">
+  <!-- Disqus comments -->
+  <div id="disqus_thread"></div>
+  <script>
+  // IMPORTANT: Specific to emiliendupont.github.io, create your own to disqus and replace this
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+  s.src = 'https://emiliendupont.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 </body>
 
 
@@ -151,6 +163,17 @@ d3.json("japan.geojson", function (error, japan) {
     });
 });
 
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- IMPORTANT: Specific to emiliendupont.github.io, change the config to match your website -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109900176-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-109900176-1');
 </script>
 
 </html>
