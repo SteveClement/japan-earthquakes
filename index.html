@@ -2,7 +2,6 @@
 <html>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-<link rel="import" href="/_includes/google_analytics.html">
 
 <style>
 .vizd3 {
@@ -33,6 +32,7 @@
       represents a single earthquake of magnitude 5 or more: the larger the radius,
       the larger the magnitude.
     </p>
+
     <p>
       Note the <a href="https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami">Tōhoku earthquake</a>
       (the largest recorded earthquake in Japan's history) on March 11, 2011. As can be seen on the map, the aftershakes from
@@ -49,14 +49,16 @@
         <li>Japan Map Geojson Data: <a href=https://bl.ocks.org/minikomi/4043986>Minikomi's block</a></li>
       </ul>
 
-    <h3 style="margin-bottom: -10px;">More Visualizations</h3>
+    <h3 style="margin-bottom: -10px;">Related</h3>
       <p>
-        More visualizations like this one are available <a href="https://emiliendupont.github.io/visualizations/">here</a>.
+        For more visualizations like this one, see <a href="https://emiliendupont.github.io/visualizations/">emiliendupont.github.io/visualizations</a>.
       </p>
+
     <!-- Disqus comments -->
+    <!-- IMPORTANT: Specific to emiliendupont.github.io, create your own
+    disqus and replace this -->
     <div id="disqus_thread"></div>
     <script>
-    // IMPORTANT: Specific to emiliendupont.github.io, create your own disqus and replace this
     (function() { // DON'T EDIT BELOW THIS LINE
     var d = document, s = d.createElement('script');
     s.src = 'https://emiliendupont.disqus.com/embed.js';
@@ -103,7 +105,7 @@ svg.selectAll("text")
 var time_format = d3.time.format("%Y-%m-%d-%H-%M"); // Date is stored as year/month/day/hour/minute
 var start_time = +(new Date(2011, 0, 1, 0, 1)); // Start time on Jan 1st 2011 at 00:01
 var end_time = +(new Date(2012, 0, 1, 0, 1)); // End Jan 1st 2012 at 00:01
-var time_speed_up = 600000;
+var time_speed_up = 800000;
 
 // Returns a date object from time string of dataset
 function parse_time_string(time_string) {
@@ -153,7 +155,7 @@ d3.json("japan.geojson", function (error, japan) {
                 .attr("stroke-width", function(d) { return d.mag / 2; })
                 .attr("opacity", 1)
                 .transition()
-                .duration(function(d) { return Math.pow( 1.3, d.mag ) * 300 })
+                .duration(function(d) { return Math.pow( 1.35, d.mag ) * 250 })
                 .delay(function(d) {
                     return (+d.date - start_time) / time_speed_up; })
                 .ease("linear")
@@ -181,7 +183,8 @@ d3.json("japan.geojson", function (error, japan) {
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<!-- IMPORTANT: Specific to emiliendupont.github.io, change the config to match your website -->
+<!-- IMPORTANT: Specific to emiliendupont.github.io, change the config
+to match your website -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109900176-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
