@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<!-- Icons -->
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 <style>
 .vizd3 {
@@ -17,6 +20,28 @@
   width: 40%;
   color: #313131;
 }
+
+a.custom_links {
+  font-size: 20px;
+  color: #313131;
+}
+
+a.custom_links:link {
+  text-decoration: none;
+}
+
+a.custom_links:visited {
+  text-decoration: none;
+}
+
+
+a.custom_links:hover {
+  text-decoration: underline;
+}
+
+a.custom_links:active {
+  text-decoration: underline;
+}
 </style>
 
 &nbsp;
@@ -27,32 +52,38 @@
   <div class='text'>
     <h1>Japan 2011 Earthquakes</h1>
 
-    <p>
+    <p style="line-height: 1.4";>
       Time lapse visualization of earthquakes in Japan in 2011. Each circle
       represents a single earthquake of magnitude 5 or more: the larger the radius,
       the larger the magnitude.
     </p>
 
-    <p>
+    <p style="line-height: 1.4";>
       Note the <a href="https://en.wikipedia.org/wiki/2011_T%C5%8Dhoku_earthquake_and_tsunami">Tōhoku earthquake</a>
       (the largest recorded earthquake in Japan's history) on March 11, 2011. As can be seen on the map, the aftershakes from
       this quake continue for months afterwards.
     </p>
 
-    <p>
+    <p style="line-height: 1.4";>
       The code for this visualization is available on <a href="https://github.com/EmilienDupont/japan-earthquakes">Github</a>.
     </p>
 
-    <h3 style="margin-bottom: -10px;">Sources</h3>
+    <h2 style="margin-bottom: -10px;">Sources</h2>
       <ul>
         <li>Earthquake Data: <a href=https://earthquake.usgs.gov/earthquakes/search/>USGS</a></li>
         <li>Japan Map Geojson Data: <a href=https://bl.ocks.org/minikomi/4043986>Minikomi's block</a></li>
       </ul>
 
-    <h3 style="margin-bottom: -10px;">Related</h3>
-      <p>
+    <h2 style="margin-bottom: -10px;">Related</h2>
+      <p style="line-height: 1.4";>
         For more visualizations like this one, see <a href="https://emiliendupont.github.io/visualizations/">emiliendupont.github.io/visualizations</a>.
       </p>
+
+    <h2 style="margin-bottom: 5px;">Links</h2>
+      <a href="https://twitter.com/emidup" class="custom_links"><i class="fa fa-twitter"></i> @emidup </a> &nbsp;
+      <a href="https://emiliendupont.github.io" class="custom_links"><i class="fa fa-cloud"></i> Homepage </a> &nbsp;
+      <a href="https://github.com/EmilienDupont" class="custom_links"><i class="fa fa-github"></i> Github </a> &nbsp;
+      <p></p>
 
     <!-- Disqus comments -->
     <!-- IMPORTANT: Specific to emiliendupont.github.io, create your own
